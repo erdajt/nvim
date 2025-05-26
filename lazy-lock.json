@@ -20,6 +20,7 @@
   "mason-tool-installer.nvim": { "branch": "main", "commit": "5639d58a3d11ff7c05c8e31e159bfedae55d7961" },
   "mason.nvim": { "branch": "main", "commit": "fc98833b6da5de5a9c5b1446ac541577059555be" },
   "mini.icons": { "branch": "main", "commit": "ec61af6e606fc89ee3b1d8f2f20166a3ca917a36" },
+  "multicursor.nvim": { "branch": "1.0", "commit": "c117b3fc537cda262a06638ca88fe6de1b53ab59" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "neogit": { "branch": "master", "commit": "12f78aaabb37b4946254dd5e47cf7b552904937a" },
   "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },

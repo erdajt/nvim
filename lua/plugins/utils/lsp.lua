@@ -132,8 +132,17 @@ return {
 				intelephense = {
 					root_dir = require("lspconfig").util.root_pattern("composer.json", ".git", "*.php"),
 				}, -- PHP
-				omnisharp = {}, -- C#
 				ts_ls = {}, -- TypeScript and JavaScript
+				csharp_ls = {
+					settings = {
+						OmniSharp = {
+							diagnostics = {
+								disabled = { "CS8019" },
+							},
+						},
+					},
+				},
+				gradle_ls = {},
 				gopls = {}, -- Golang
 				solargraph = {}, -- Ruby
 				-- tsserver = {}, -- TypeScript and JavaScript
@@ -170,6 +179,8 @@ return {
 				"stylua",
 				"rustfmt",
 				"rust_analyzer",
+				"csharp_ls",
+				"gradle_ls",
 				"gopls",
 				"html",
 				"pyright",

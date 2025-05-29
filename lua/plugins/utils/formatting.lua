@@ -16,6 +16,7 @@ return {
 				-- php = { "php-cs-fixer" },
 				lua = { "stylua" },
 				rust = { "rustfmt" },
+				sh = { "beautysh" },
 				-- c = { "clang-format" },
 				-- cpp = { "clang-format" },
 				cs = { "csharpier" },

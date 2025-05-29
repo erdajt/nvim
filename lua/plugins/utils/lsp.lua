@@ -144,6 +144,7 @@ return {
 				},
 				gradle_ls = {},
 				gopls = {}, -- Golang
+				bashls = {},
 				solargraph = {}, -- Ruby
 				-- tsserver = {}, -- TypeScript and JavaScript
 				pyright = {}, -- Python
@@ -182,6 +183,7 @@ return {
 				"csharp_ls",
 				"gradle_ls",
 				"gopls",
+				"bashls",
 				"html",
 				"pyright",
 				"tailwindcss-language-server",

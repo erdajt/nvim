@@ -1,19 +1,19 @@
 return {
 	{
 		"projekt0n/github-nvim-theme",
-		-- init = function()
-		-- 	vim.cmd("set termguicolors")
-		-- 	vim.cmd.colorscheme("github_dark_dimmed")
-		-- 	vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		-- end,
+		init = function()
+			vim.cmd("set termguicolors")
+			vim.cmd.colorscheme("github_dark_dimmed")
+			vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
+		end,
 	},
 
 	{
 		"EdenEast/nightfox.nvim",
-		config = function()
-			vim.cmd.colorscheme("carbonfox")
-			vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		end,
+		-- config = function()
+		-- 	vim.cmd.colorscheme("carbonfox")
+		-- 	vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
+		-- end,
 	},
 
 	{

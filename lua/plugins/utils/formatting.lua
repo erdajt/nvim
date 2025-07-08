@@ -17,6 +17,7 @@ return {
 				lua = { "stylua" },
 				rust = { "rustfmt" },
 				sh = { "beautysh" },
+				java = { "google_java_format" },
 				-- c = { "clang-format" },
 				-- cpp = { "clang-format" },
 				cs = { "csharpier" },

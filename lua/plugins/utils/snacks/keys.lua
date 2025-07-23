@@ -29,7 +29,7 @@ local keys = {
 		desc = "Command History",
 	},
 	{
-		"<leader>n",
+		"<leader>N",
 		function()
 			Snacks.picker.notifications()
 		end,
@@ -86,35 +86,35 @@ local keys = {
 	},
 	-- Git
 	{
-		"<leader>gb",
+		"mga",
 		function()
 			Snacks.picker.git_branches()
 		end,
 		desc = "Git Branches",
 	},
 	{
-		"<leader>gl",
+		"mgl",
 		function()
 			Snacks.picker.git_log()
 		end,
 		desc = "Git Log",
 	},
 	{
-		"<leader>gL",
+		"mgL",
 		function()
 			Snacks.picker.git_log_line()
 		end,
 		desc = "Git Log Line",
 	},
 	{
-		"<leader>gs",
+		"mgs",
 		function()
 			Snacks.picker.git_status()
 		end,
 		desc = "Git Status",
 	},
 	{
-		"<leader>gS",
+		"mgS",
 		function()
 			Snacks.picker.git_stash()
 		end,
@@ -136,14 +136,14 @@ local keys = {
 	},
 	-- Grep
 	{
-		"<leader>sb",
+		"<leader>sB",
 		function()
 			Snacks.picker.lines()
 		end,
 		desc = "Buffer Lines",
 	},
 	{
-		"<leader>sB",
+		"<leader>sb",
 		function()
 			Snacks.picker.grep_buffers()
 		end,
@@ -498,7 +498,7 @@ local keys = {
 		mode = { "n", "t" },
 	},
 	{
-		"<leader>N",
+		"<leader>Nw",
 		desc = "Neovim News",
 		function()
 			Snacks.win({

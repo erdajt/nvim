@@ -31,6 +31,14 @@ return {
 			--    That is to say, every time a new file is opened that is associated with
 			--    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
 			--    function will be executed to configure the current buffer
+			vim.diagnostic.config({
+				virtual_text = true,
+				signs = true,
+				underline = true,
+				update_in_insert = false,
+				severity_sort = true,
+			})
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 				callback = function(event)
@@ -134,9 +142,38 @@ return {
 				intelephense = {
 					root_dir = require("lspconfig").util.root_pattern("composer.json", ".git", "*.php"),
 				}, -- PHP
-				omnisharp = {}, -- C#
 				ts_ls = {}, -- TypeScript and JavaScript
+				csharp_ls = {
+					settings = {
+						OmniSharp = {
+							diagnostics = {
+								disabled = { "CS8019" },
+							},
+						},
+					},
+				},
+				gradle_ls = {},
 				gopls = {}, -- Golang
+				jdtls = {
+					cmd = {
+						"/usr/lib/jvm/java-21-openjdk/bin/java", -- use Java 21 explicitly
+						"-Declipse.application=org.eclipse.jdt.ls.core.id1",
+						"-Dosgi.bundles.defaultStartLevel=4",
+						"-Declipse.product=org.eclipse.jdt.ls.core.product",
+						"-Dlog.level=ALL",
+						"-noverify",
+						"-Xmx1G",
+						"-jar",
+						vim.fn.expand(
+							"~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"
+						),
+						"-configuration",
+						vim.fn.expand("~/.local/share/nvim/mason/packages/jdtls/config_linux"),
+						"-data",
+						vim.fn.stdpath("cache") .. "/jdtls-workspace",
+					},
+				}, -- java
+				bashls = {},
 				solargraph = {}, -- Ruby
 				-- tsserver = {}, -- TypeScript and JavaScript
 				pyright = {}, -- Python
@@ -172,7 +209,11 @@ return {
 				"stylua",
 				"rustfmt",
 				"rust_analyzer",
+				"csharp_ls",
+				"gradle_ls",
 				"gopls",
+				"jdtls",
+				"bashls",
 				"html",
 				"pyright",
 				"tailwindcss-language-server",

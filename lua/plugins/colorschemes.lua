@@ -1,14 +1,5 @@
 return {
 	{
-		"projekt0n/github-nvim-theme",
-		-- init = function()
-		-- 	vim.cmd("set termguicolors")
-		-- 	vim.cmd.colorscheme("github_dark_dimmed")
-		-- 	vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		-- end,
-	},
-
-	{
 		"EdenEast/nightfox.nvim",
 		-- config = function()
 		-- 	vim.cmd.colorscheme("carbonfox")
@@ -39,18 +30,18 @@ return {
 		-- end,
 	},
 
-	{
-		"zenbones-theme/zenbones.nvim",
-		dependencies = "rktjmp/lush.nvim",
-		lazy = false,
-		priority = 1000,
-		background = "dark",
-		config = function()
-			vim.cmd("set termguicolors")
-			vim.cmd.colorscheme("forestbones")
-			vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		end,
-	},
+	-- {
+	-- 	"zenbones-theme/zenbones.nvim",
+	-- 	dependencies = "rktjmp/lush.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	background = "dark",
+	-- 	config = function()
+	-- 		vim.cmd("set termguicolors")
+	-- 		vim.cmd.colorscheme("forestbones")
+	-- 		vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
+	-- 	end,
+	-- },
 
 	{
 		"folke/tokyonight.nvim",
@@ -64,19 +55,19 @@ return {
 		end,
 	},
 
-	{
-		"sainnhe/everforest",
-		config = function()
-			vim.g.everforest_background = "soft"
-			vim.g.everforest_terminal_colors = 1
-			vim.g.everforest_enable_italic = 1
-			vim.g.everforest_better_performance = 1
-			vim.g.everforest_cursor = "aqua"
-			vim.g.everforest_diagnostic_virtual_text = "colored"
-			vim.cmd("set termguicolors")
-			-- vim.cmd.colorscheme("everforest")
-		end,
-	},
+	-- {
+	-- 	"sainnhe/everforest",
+	-- 	config = function()
+	-- 		vim.g.everforest_background = "soft"
+	-- 		vim.g.everforest_terminal_colors = 1
+	-- 		vim.g.everforest_enable_italic = 1
+	-- 		vim.g.everforest_better_performance = 1
+	-- 		vim.g.everforest_cursor = "aqua"
+	-- 		vim.g.everforest_diagnostic_virtual_text = "colored"
+	-- 		vim.cmd("set termguicolors")
+	--      vim.cmd.colorscheme("everforest")
+	-- 	end,
+	-- },
 
 	{
 		"catppuccin/nvim",

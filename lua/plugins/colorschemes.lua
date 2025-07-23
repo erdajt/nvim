@@ -10,21 +10,21 @@ return {
 
 	{
 		"EdenEast/nightfox.nvim",
-		config = function()
-			vim.cmd.colorscheme("nightfox")
-		end,
+		-- config = function()
+		-- 	vim.cmd.colorscheme("nightfox")
+		-- end,
 	},
 
 	{
 		"folke/tokyonight.nvim",
-		-- init = function()
-		-- vim.cmd 'set termguicolors'
-		-- vim.cmd.colorscheme 'tokyonight-moon'
-		--
-		-- vim.defer_fn(function()
-		--   vim.cmd [[highlight Cursor guifg=#FFFFFF guibg=lightgreen]]
-		-- end, 1)
-		-- end,
+		init = function()
+			vim.cmd("set termguicolors")
+			vim.cmd.colorscheme("tokyonight-moon")
+
+			vim.defer_fn(function()
+				vim.cmd([[highlight Cursor guifg=#FFFFFF guibg=lightgreen]])
+			end, 1)
+		end,
 	},
 
 	{

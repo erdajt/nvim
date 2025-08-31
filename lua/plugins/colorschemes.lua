@@ -7,6 +7,8 @@ return {
 		-- end,
 	},
 
+	{ "projekt0n/github-nvim-theme", name = "github-theme" },
+
 	{
 		"eldritch-theme/eldritch.nvim",
 
@@ -30,44 +32,44 @@ return {
 		-- end,
 	},
 
-	-- {
-	-- 	"zenbones-theme/zenbones.nvim",
-	-- 	dependencies = "rktjmp/lush.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	background = "dark",
-	-- 	config = function()
-	-- 		vim.cmd("set termguicolors")
-	-- 		vim.cmd.colorscheme("forestbones")
-	-- 		vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-	-- 	end,
-	-- },
+	{
+		"zenbones-theme/zenbones.nvim",
+		dependencies = "rktjmp/lush.nvim",
+		lazy = false,
+		priority = 1000,
+		background = "dark",
+		config = function()
+			vim.cmd("set termguicolors")
+			vim.cmd.colorscheme("forestbones")
+			vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
+		end,
+	},
 
 	{
 		"folke/tokyonight.nvim",
 		init = function()
-			vim.cmd("set termguicolors")
-			vim.cmd.colorscheme("tokyonight-moon")
-
-			vim.defer_fn(function()
-				vim.cmd([[highlight Cursor guifg=#FFFFFF guibg=lightgreen]])
-			end, 1)
+			-- vim.cmd("set termguicolors")
+			-- vim.cmd.colorscheme("tokyonight-moon")
+			--
+			-- vim.defer_fn(function()
+			-- 	vim.cmd([[highlight Cursor guifg=#FFFFFF guibg=lightgreen]])
+			-- end, 1)
 		end,
 	},
 
-	-- {
-	-- 	"sainnhe/everforest",
-	-- 	config = function()
-	-- 		vim.g.everforest_background = "soft"
-	-- 		vim.g.everforest_terminal_colors = 1
-	-- 		vim.g.everforest_enable_italic = 1
-	-- 		vim.g.everforest_better_performance = 1
-	-- 		vim.g.everforest_cursor = "aqua"
-	-- 		vim.g.everforest_diagnostic_virtual_text = "colored"
-	-- 		vim.cmd("set termguicolors")
-	--      vim.cmd.colorscheme("everforest")
-	-- 	end,
-	-- },
+	{
+		"sainnhe/everforest",
+		config = function()
+			vim.g.everforest_background = "soft"
+			vim.g.everforest_terminal_colors = 1
+			vim.g.everforest_enable_italic = 1
+			vim.g.everforest_better_performance = 1
+			vim.g.everforest_cursor = "aqua"
+			vim.g.everforest_diagnostic_virtual_text = "colored"
+			vim.cmd("set termguicolors")
+			vim.cmd.colorscheme("everforest")
+		end,
+	},
 
 	{
 		"catppuccin/nvim",

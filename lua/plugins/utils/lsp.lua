@@ -140,7 +140,7 @@ return {
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				intelephense = {
-					root_dir = require("lspconfig").util.root_pattern("composer.json", ".git", "*.php"),
+					root_dir = require("lspconfig.util").root_pattern("composer.json", ".git", "*.php"),
 				}, -- PHP
 				ts_ls = {}, -- TypeScript and JavaScript
 				csharp_ls = {
@@ -207,6 +207,7 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua",
+				"black",
 				"rustfmt",
 				"rust_analyzer",
 				"csharp_ls",
@@ -223,7 +224,8 @@ return {
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("lspconfig").intelephense.setup({
+			-- intelephense
+			vim.lsp.config("intelephense", {
 				on_attach = function(client)
 					-- Disable document formatting
 					client.resolved_capabilities.document_formatting = false
@@ -237,20 +239,25 @@ return {
 					},
 				},
 			})
+			vim.lsp.enable("intelephense")
 
-			require("lspconfig").solargraph.setup({
+			-- solargraph
+			vim.lsp.config("solargraph", {
 				cmd = { "solargraph", "stdio" },
 				filetypes = { "ruby", "rb" },
 				capabilities = capabilities,
 			})
+			vim.lsp.enable("solargraph")
 
+			-- clangd
 			capabilities.offsetEncoding = { "utf-16" }
-			require("lspconfig").clangd.setup({
+			vim.lsp.config("clangd", {
 				cmd = { "clangd", "--background-index", "--clang-tidy" },
 				filetypes = { "c", "cpp", "objc", "objcpp" },
 				capabilities = capabilities,
 				single_file_support = true,
 			})
+			vim.lsp.enable("clangd")
 
 			require("mason-lspconfig").setup({
 				handlers = {
@@ -260,7 +267,8 @@ return {
 						-- by the server configuration above. Useful when disabling
 						-- certain features of an LSP (for example, turning off formatting for tsserver)
 						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
+						vim.lsp.config(server_name, server)
+						vim.lsp.enable(server_name)
 					end,
 				},
 			})

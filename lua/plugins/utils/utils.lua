@@ -2,6 +2,16 @@ return {
 	{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 
 	{
+		"kawre/leetcode.nvim",
+		build = ":TSUpdate html",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {},
+	},
+
+	{
 		"akinsho/bufferline.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		opts = {

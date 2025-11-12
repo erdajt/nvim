@@ -15,6 +15,7 @@ return {
 			formatters_by_ft = {
 				-- php = { "php-cs-fixer" },
 				lua = { "stylua" },
+				python = { "black" },
 				rust = { "rustfmt" },
 				sh = { "beautysh" },
 				java = { "google_java_format" },

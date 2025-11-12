@@ -21,3 +21,10 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "md", "<cmd>bd<CR>", { desc = "Close buffer" })
 
 vim.keymap.set("n", "mgb", "<cmd>GitBlameToggle<CR>", { desc = "Toggle Git Blame" })
+
+vim.keymap.set("n", "Q", function()
+	local count = vim.v.count1
+	for _ = 1, count do
+		vim.cmd("q")
+	end
+end, { silent = true })

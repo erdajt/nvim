@@ -32,6 +32,8 @@ return {
 		-- end,
 	},
 
+	{ "rose-pine/neovim" },
+
 	{
 		"zenbones-theme/zenbones.nvim",
 		dependencies = "rktjmp/lush.nvim",
@@ -64,7 +66,7 @@ return {
 			vim.g.everforest_terminal_colors = 1
 			vim.g.everforest_enable_italic = 1
 			vim.g.everforest_better_performance = 1
-			vim.g.everforest_cursor = "aqua"
+			-- vim.g.everforest_cursor = "aqua"
 			vim.g.everforest_diagnostic_virtual_text = "colored"
 			vim.cmd("set termguicolors")
 			vim.cmd.colorscheme("everforest")

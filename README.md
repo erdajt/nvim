@@ -1,6 +1,6 @@
 <h1 align="center">My neovim config</h3>
 
-![Wed Apr 17 01:46:12 PM CEST 2024](https://github.com/ErdajtSopjani/nvim/assets/120386306/ecba5ffb-63f6-4ba3-a12e-3d52c8c4b6ec)
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/b290db0b-8f8b-4d6c-b559-31c029ead2f5" />
 
 <a name="readme-top"></a>
 
@@ -14,8 +14,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  
+<img width="1915" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b53e83b-8168-4126-898e-f83b7437e52e" />
 
-![Wed Apr 17 01:48:52 PM CEST 2024](https://github.com/ErdajtSopjani/nvim/assets/120386306/159dbad1-026a-4241-9886-b5de52311a73)
 
 <h2 align="center">NOTE: my config has been rewritten. for the old version go to: <a href="https://github.com/ErdajtSopjani/nvim/tree/old">Old branch</a>
 
@@ -34,18 +35,24 @@
 <!-- ABOUT THE PROJECT -->
 ## About
 
-![Wed Apr 17 02:25:58 PM CEST 2024](https://github.com/ErdajtSopjani/nvim/assets/120386306/86f3e3e4-de63-4729-94df-5a7b68026b78)
+<img width="861" height="104" alt="image" src="https://github.com/user-attachments/assets/ea69b5cf-8941-46a6-b3f0-a88876c42002" />
 
 Everyone needs their own setup or tweak to the software they use everyday, to guarantee productivity and most importantly ***fun*** while working/coding.
 
 This is just my config with these features
+
 * Language servers (LSP)'s
 * Custom transparency keybinds, for tiling wm users. ```<Leader>+t+t``` to toggle transparency
 * Custom terminal shortcuts to open terminals inside the editor in 3 possible places. ```<Alt>+1 or <Alt>+2 or <Alt>+3```
-* Telescope as a fuzzyfinder to quickly navigate through your codebase. ```<Leader>+s``` to see all available shortcuts
+* Snacks as a fuzzyfinder to quickly navigate through your codebase. ```<Leader>+s``` to see all available shortcuts
 * Bufferlines and Bufferwindows for better awareness while coding.
 * Nvimtree as the file *"tree"* for devs that are used to that. ```<Leader>+e``` to toggle it
 * Different colorschemes with a shortcut to switch between them. ```<Leader>+t+h```
+* Custom git client
+* Markdown view toggle
+* Custom DB client
+
+And alot more, pretty much anything you can think of that would be neat to have.
 
 The Leader key is set to space
 
@@ -58,8 +65,7 @@ It's how I started this config too as you can see in the commit history.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Wed Apr 17 01:49:05 PM CEST 2024](https://github.com/ErdajtSopjani/nvim/assets/120386306/cc97b281-bddf-4e8e-b553-08f8d2b12c5b)
-
+<img width="1916" height="1080" alt="image" src="https://github.com/user-attachments/assets/cefcec12-1daf-4130-a4d3-33dd44741c4c" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -12,6 +12,13 @@ return {
 	},
 
 	{
+		"OXY2DEV/markview.nvim",
+		config = function()
+			vim.keymap.set("n", "<leader>m", "<CMD>Markview<CR>", { desc = "Toggles `markview` previews globally." })
+		end,
+	},
+
+	{
 		"akinsho/bufferline.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
 		opts = {

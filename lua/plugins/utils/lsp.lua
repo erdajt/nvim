@@ -252,7 +252,12 @@ return {
 			-- clangd
 			capabilities.offsetEncoding = { "utf-16" }
 			vim.lsp.config("clangd", {
-				cmd = { "clangd", "--background-index", "--clang-tidy" },
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--clang-tidy",
+					"--fallback-style={BasedOnStyle: llvm, IndentWidth: 4, UseTab: Always}",
+				},
 				filetypes = { "c", "cpp", "objc", "objcpp" },
 				capabilities = capabilities,
 				single_file_support = true,

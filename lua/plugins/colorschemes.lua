@@ -1,83 +1,74 @@
+local theme = require("theme").name
+
+local function apply()
+	vim.opt.termguicolors = true
+
+	if theme == "tokyo-night" or theme == "tokyo-dracula" then
+		require("tokyonight").setup({
+			style = "moon",
+			styles = { comments = { italic = true }, keywords = { italic = true } },
+		})
+		vim.cmd.colorscheme("tokyonight-moon")
+	elseif theme == "dracula" then
+		require("dracula").setup({ transparent_bg = false, italic_comment = true })
+		vim.cmd.colorscheme("dracula")
+	elseif theme == "nord" then
+		vim.cmd.colorscheme("nordfox")
+	elseif theme == "catppuccin-mocha" then
+		require("catppuccin").setup({ flavour = "mocha", term_colors = true })
+		vim.cmd.colorscheme("catppuccin-mocha")
+	elseif theme == "rose-pine" then
+		require("rose-pine").setup({ variant = "moon", styles = { italic = true } })
+		vim.cmd.colorscheme("rose-pine")
+		vim.api.nvim_set_hl(0, "Cursor", { fg = "#1f1d2e", bg = "#f4b8c6" })
+	elseif theme == "eldritch" then
+		vim.cmd.colorscheme("eldritch")
+	elseif theme == "zenbones" then
+		vim.cmd.colorscheme("forestbones")
+	elseif theme == "nightfox" then
+		vim.cmd.colorscheme("carbonfox")
+	elseif theme == "github" then
+		vim.cmd.colorscheme("github_dark")
+	else
+		vim.g.everforest_background = "soft"
+		vim.g.everforest_terminal_colors = 1
+		vim.g.everforest_enable_italic = 1
+		vim.g.everforest_better_performance = 1
+		vim.g.everforest_diagnostic_virtual_text = "colored"
+		vim.cmd.colorscheme("everforest")
+	end
+end
+
 return {
-	{
-		"EdenEast/nightfox.nvim",
-		-- config = function()
-		-- 	vim.cmd.colorscheme("carbonfox")
-		-- 	vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		-- end,
-	},
-
+	{ "EdenEast/nightfox.nvim" },
 	{ "projekt0n/github-nvim-theme", name = "github-theme" },
-
 	{
 		"eldritch-theme/eldritch.nvim",
-
 		opts = {
-			-- palette = "darker",
 			terminal_colors = true,
 			styles = {
 				comments = { italic = true },
 				keywords = { italic = true },
-				functions = {},
-				variables = {},
-				sidebars = "dark",
-				floats = "dark",
 			},
 			sidebars = { "qf", "help", "snacks", "terminal", "Snacks.Terminal", "NvimTree", "Mason" },
 			lualine_bold = true,
 		},
-
-		-- config = function()
-		-- 	vim.cmd.colorscheme("eldritch")
-		-- end,
 	},
-
-	{ "rose-pine/neovim" },
-
+	{ "rose-pine/neovim", name = "rose-pine" },
 	{
 		"zenbones-theme/zenbones.nvim",
 		dependencies = "rktjmp/lush.nvim",
-		lazy = false,
-		priority = 1000,
-		background = "dark",
-		config = function()
-			vim.cmd("set termguicolors")
-			vim.cmd.colorscheme("forestbones")
-			vim.cmd([[highlight Cursor guifg=pine guibg=lightpink]])
-		end,
 	},
-
-	{
-		"folke/tokyonight.nvim",
-		init = function()
-			-- vim.cmd("set termguicolors")
-			-- vim.cmd.colorscheme("tokyonight-moon")
-			--
-			-- vim.defer_fn(function()
-			-- 	vim.cmd([[highlight Cursor guifg=#FFFFFF guibg=lightgreen]])
-			-- end, 1)
-		end,
-	},
-
+	{ "folke/tokyonight.nvim" },
+	{ "sainnhe/everforest" },
+	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "Mofiqul/dracula.nvim" },
+	{ "shaunsingh/nord.nvim" },
+	{ "sainnhe/sonokai" },
 	{
 		"sainnhe/everforest",
-		config = function()
-			vim.g.everforest_background = "soft"
-			vim.g.everforest_terminal_colors = 1
-			vim.g.everforest_enable_italic = 1
-			vim.g.everforest_better_performance = 1
-			-- vim.g.everforest_cursor = "aqua"
-			vim.g.everforest_diagnostic_virtual_text = "colored"
-			vim.cmd("set termguicolors")
-			vim.cmd.colorscheme("everforest")
-		end,
-	},
-
-	{
-		"catppuccin/nvim",
-		-- config = function()
-		--   -- vim.cmd [[autocmd VimEnter * highlight Cursor guibg=lightpink]]
-		-- end,
-		name = "catppucin",
+		name = "theme-applier",
+		priority = 1000,
+		config = apply,
 	},
 }

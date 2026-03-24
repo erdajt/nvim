@@ -59,7 +59,7 @@ local keys = {
 	{
 		"<leader>sf",
 		function()
-			Snacks.picker.files()
+			Snacks.picker.files({ exclude = { "tmp" } })
 		end,
 		desc = "Find Files",
 	},

@@ -21,6 +21,7 @@ return {
 				java = { "google_java_format" },
 				yaml = { "yamlfmt" },
 				c = { "clang-format" },
+				h = { "clang-format" },
 				-- cpp = { "clang-format" },
 				cs = { "csharpier" },
 			},

@@ -258,7 +258,7 @@ return {
 					"--clang-tidy",
 					"--fallback-style={BasedOnStyle: llvm, IndentWidth: 4, UseTab: Always}",
 				},
-				filetypes = { "c", "cpp", "objc", "objcpp" },
+				filetypes = { "c", "h", "cpp", "objc", "objcpp" },
 				capabilities = capabilities,
 				single_file_support = true,
 			})

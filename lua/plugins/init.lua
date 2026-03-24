@@ -14,6 +14,7 @@ require("lazy").setup({
 	require("plugins.utils.lsp"),
 	require("plugins.utils.formatting"),
 	require("plugins.utils.noice"),
+	require("plugins.utils.99"),
 	require("plugins.utils.utils"),
 }, {
 	ui = {
